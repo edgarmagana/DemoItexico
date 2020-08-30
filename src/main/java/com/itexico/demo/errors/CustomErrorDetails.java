@@ -12,7 +12,7 @@ public class CustomErrorDetails {
     }
 
 
-    public LocalDateTime getTiemStamp() {
+    public LocalDateTime getTimeStamp() {
         return timeStamp;
     }
 

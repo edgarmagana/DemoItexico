@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 public class Reservation implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @Column(nullable = false)
+    //@Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(nullable = false)
@@ -24,8 +24,14 @@ public class Reservation implements Serializable {
     public void createDate(){
         time = LocalDateTime.now();
     }
+
+    public Reservation(Reservation reservation){
+        this(reservation.name, reservation.time);
+    }
+
     public Reservation(String name, LocalDateTime time){
         this.name= name;
         this.time=time;
     }
+
 }

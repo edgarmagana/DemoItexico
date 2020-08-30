@@ -11,10 +11,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.time.LocalDateTime;
 
 @ControllerAdvice
-public class NotAellowedMethods extends ResponseEntityExceptionHandler {
+public class NotAllowedMethods extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(HttpRequestMethodNotSupportedException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
-        CustomErrorDetails customErrorDetails= new CustomErrorDetails(LocalDateTime.now(), "Method  not allowed");
+        CustomErrorDetails customErrorDetails = new CustomErrorDetails(LocalDateTime.now(), "Method  not allowed");
         return new ResponseEntity<>(customErrorDetails, HttpStatus.METHOD_NOT_ALLOWED);
     }
 }
