@@ -1,4 +1,4 @@
-package com.itexico.demo.demo;
+package com.itexico.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

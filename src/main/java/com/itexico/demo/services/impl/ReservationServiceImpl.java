@@ -1,13 +1,14 @@
-package com.itexico.demo.demo.models.services;
+package com.itexico.demo.services.impl;
 
-import com.itexico.demo.demo.models.dao.IReservationDao;
-import com.itexico.demo.demo.models.entity.Reservation;
+import com.itexico.demo.models.dao.IReservationDao;
+import com.itexico.demo.models.entity.Reservation;
+import com.itexico.demo.services.IReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class ReservationService implements IReservationService {
+public class ReservationServiceImpl implements IReservationService {
     @Autowired
     IReservationDao reservationDao;
     @Override

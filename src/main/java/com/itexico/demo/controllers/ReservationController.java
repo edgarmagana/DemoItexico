@@ -1,7 +1,7 @@
-package com.itexico.demo.demo.controllers;
+package com.itexico.demo.controllers;
 
-import com.itexico.demo.demo.models.entity.Reservation;
-import com.itexico.demo.demo.models.services.IReservationService;
+import com.itexico.demo.models.entity.Reservation;
+import com.itexico.demo.services.IReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.GetMapping;
