@@ -12,13 +12,18 @@ import java.time.LocalDateTime;
 public class Reservation implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @NonNull
+    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NonNull
+    @Column(nullable = false)
     private String name;
-    @NonNull
+    @Column(nullable = false)
     private LocalDateTime time ;
+
+    @PrePersist
+    public void createDate(){
+        time = LocalDateTime.now();
+    }
     public Reservation(String name, LocalDateTime time){
         this.name= name;
         this.time=time;

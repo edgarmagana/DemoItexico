@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 /**
  *
- */
+*/
 @Component
 public class DatabaseLoader implements CommandLineRunner {
 

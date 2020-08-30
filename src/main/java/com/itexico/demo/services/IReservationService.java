@@ -12,5 +12,9 @@ public interface IReservationService {
      *
      * @return
      */
-    public List<Reservation> findAll();
+    List<Reservation> findAll();
+    Reservation getById(int id);
+    Reservation save(Reservation reservation);
+    Reservation update(Reservation reservation);
+    void delete(int id);
 }

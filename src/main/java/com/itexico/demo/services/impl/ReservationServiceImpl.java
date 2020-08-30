@@ -15,4 +15,24 @@ public class ReservationServiceImpl implements IReservationService {
     public List<Reservation> findAll() {
         return (List<Reservation>) reservationDao.findAll();
     }
+
+    @Override
+    public Reservation getById(int id ) {
+        return reservationDao.findById(id).orElse(null);
+    }
+
+    @Override
+    public Reservation save(Reservation reservation) {
+        return reservationDao.save(reservation);
+    }
+
+    @Override
+    public Reservation update(Reservation reservation) {
+        return reservationDao.save(reservation);
+    }
+
+    @Override
+    public void delete(int id) {
+        reservationDao.deleteById(id);
+    }
 }
