@@ -10,6 +10,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.time.LocalDateTime;
 
+/**
+ * Custom exceptions to hide details in Stack trace to clients
+ * overriding the handleHttpRequestMethodNotSupported method.
+ */
 @ControllerAdvice
 public class NotAllowedMethods extends ResponseEntityExceptionHandler {
     @Override

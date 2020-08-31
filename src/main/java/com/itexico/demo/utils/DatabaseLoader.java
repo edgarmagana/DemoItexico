@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 
 /**
- *
+ * This class loads automatically some data sample
  */
 @Component
 public class DatabaseLoader implements CommandLineRunner {
